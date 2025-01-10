@@ -1,8 +1,11 @@
 import { Component } from "react";
+import { Spinner, Alert } from "react-bootstrap";
 
 class MyTrending extends Component {
   state = {
     search: [],
+    loading: true,
+    notloaded: false,
   };
   getTrenFilm = () => {
     fetch(this.props.query)
@@ -17,9 +20,11 @@ class MyTrending extends Component {
         console.log("I dati sono arrivati correttamente!", data.Search),
           this.setState({ search: data.Search });
         console.log(this.state.search);
+        this.setState({ loading: false });
       })
       .catch((error) => {
         console.error("Errore nel recupero dati", error);
+        this.setState({ notloaded: true });
       });
   };
   componentDidMount() {
@@ -28,7 +33,24 @@ class MyTrending extends Component {
   render() {
     return (
       <div className="container-fluid mt-5 ms-1">
-        <h2 className="text-white">{this.props.title}</h2>
+        <h2 className="text-white">
+          {this.props.title} &nbsp; &nbsp;
+          {this.state.loading && (
+            <Spinner animation="border" variant="secondary" />
+          )}
+          {this.state.notloaded && (
+            <Alert
+              variant="danger"
+              className="text-center w-75 me-auto ms-auto"
+              style={{
+                fontSize: "20px",
+              }}
+            >
+              ⛔ OPS! There are some problems with your connection! Please try
+              again. ⛔
+            </Alert>
+          )}
+        </h2>
         <div
           id={this.props.identity}
           className="carousel slide"

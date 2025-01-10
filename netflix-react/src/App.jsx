@@ -16,7 +16,7 @@ function App() {
       <MyTrending
         identity="firstSec"
         title="Trending Now"
-        query="http://www.omdbapi.com/?apikey=88599aa0&s=Marvel"
+        query="http://www.omdbapi.com/?apiky=88599aa0&s=Marvel" //end point sbagliato, quello corretto è: http://www.omdbapi.com/?apikey=88599aa0&s=Marvel
       />
       <MyTrending
         identity="secondSec"
