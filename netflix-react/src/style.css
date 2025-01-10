@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  background-color: black !important;
+}
+
+i,
+h2,
+h4,
+footer,
+.icons,
+#kids {
+  color: #f5f5f1;
+}
+
+i {
+  margin: 1rem;
+}
+
+.social {
+  font-size: 30px;
+}
+
+main img {
+  margin: 0.2rem;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+main img:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 3px 3px rgba(234, 232, 232, 0.2);
+}
+
+img {
+  background-color: transparent;
+}
+
+.userLogo {
+  width: 25px;
+}
+
+.services {
+  padding: 1rem;
+}
+
+.ifot {
+  margin: 0;
+}
+
+.epicodeBtn,
+.maturingP {
+  background-color: #929292;
+}
+
+.langBtn {
+  background-color: transparent;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.langBtn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.form-check-input {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #929292;
+}
+
+.image,
+.text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.navbar-nav {
+  font-size: 90%;
+}
+
+.footer-icon,
+.footer-links a,
+.footer-button,
+.copyright {
+  color: #838383;
+}
+
+.footer-links {
+  font-size: 0.8em;
+}
+
+.footer-links p {
+  margin-bottom: 0.3em;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+.footer-button {
+  border-color: #838383;
+}
+
+.copyright {
+  font-size: 0.6em;
+}
+
+.col img {
+  transition: transform 0.2s;
+}
+
+.col img:hover {
+  transform: scale(1.1);
+}
