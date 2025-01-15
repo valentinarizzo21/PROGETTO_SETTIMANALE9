@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class NavNetflix extends Component {
   render() {
@@ -6,13 +7,17 @@ class NavNetflix extends Component {
       <>
         <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
           <div className="container-fluid d-flex justify-content-between">
-            <a className="navbar-brand" style={{ width: "200px" }} href="#">
+            <Link
+              className="navbar-brand"
+              style={{ width: "200px" }}
+              to="/trending"
+            >
               <img
                 src="public/img/logo.png"
                 alt="logoNetflix"
                 className="w-50"
               />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -30,38 +35,42 @@ class NavNetflix extends Component {
                 style={{ "--bs-scroll-height": "100px" }}
               >
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/trending"
+                  >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/trending">
                     Tv Shows
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/trending">
                     Movies
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/trending">
                     Recently Added
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/trending">
                     My list
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <span className="tentMenu d-flex align-items-center">
                 <p className="h4 text-white">KIDS</p>
                 <i className="bi bi-search"></i>
                 <div className="dropdown">
-                  <a
+                  <Link
                     className="btn btn-secondary dropdown-toggle border border-0 bg-dark"
-                    href="#"
+                    to="/trending"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -71,7 +80,7 @@ class NavNetflix extends Component {
                       alt="userNetflix"
                       className="userLogo"
                     />
-                  </a>
+                  </Link>
                   <ul className="dropdown-menu dropdown-menu-end mt-3 bg-dark text-white">
                     <p className="text-center">
                       <img
